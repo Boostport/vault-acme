@@ -95,7 +95,7 @@ Vagrantfile
 .idea
 .vscode
 
-dist/*
+dist/
 
 tags
 
