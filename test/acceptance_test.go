@@ -78,7 +78,7 @@ func TestVault(t *testing.T) {
 	client.SetToken("foo")
 
 	logical := client.Logical()
-	b, err := os.ReadFile("../build/acme")
+	b, err := os.ReadFile("../build/vault-plugin-secrets-acme")
 	require.NoError(t, err)
 	sum := sha256.Sum256(b)
 
@@ -86,7 +86,7 @@ func TestVault(t *testing.T) {
 		"sys/plugins/catalog/secret/acme",
 		map[string]interface{}{
 			"sha256":  fmt.Sprintf("%x", sum),
-			"command": "acme",
+			"command": "vault-plugin-secrets-acme",
 		},
 	)
 	require.NoError(t, err)

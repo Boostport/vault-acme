@@ -1,7 +1,7 @@
 builds:
-  - main: ./cmd/acme
+  - main: ./cmd/vault-plugin-secrets-acme
     id: vault-acme
-    binary: vault-acme
+    binary: vault-plugin-secrets-acme
     env:
       - CGO_ENABLED=0
     goos:
