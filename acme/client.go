@@ -52,7 +52,7 @@ func setupChallengeProviders(ctx context.Context, logger log.Logger, client *leg
 		err = client.Challenge.SetDNS01Provider(
 			provider,
 			dns01.CondOption(len(a.DNSResolvers) > 0, dns01.AddRecursiveNameservers(a.DNSResolvers)),
-			dns01.CondOption(a.IgnoreDNSPropagation, dns01.DisableCompletePropagationRequirement()),
+			dns01.CondOption(a.IgnoreDNSPropagation, dns01.DisableAuthoritativeNssPropagationRequirement()),
 		)
 		if err != nil {
 			return err

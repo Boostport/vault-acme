@@ -3,9 +3,9 @@ package acme
 import (
 	"context"
 
+	"github.com/go-viper/mapstructure/v2"
 	"github.com/hashicorp/vault/sdk/framework"
 	"github.com/hashicorp/vault/sdk/logical"
-	"github.com/mitchellh/mapstructure"
 )
 
 func pathRoles(b *backend) []*framework.Path {
