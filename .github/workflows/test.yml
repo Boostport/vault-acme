@@ -10,12 +10,12 @@ jobs:
     name: Run tests
     runs-on: ubuntu-latest
     env:
-      VAULT_VERSION: "1.17.0"
+      VAULT_VERSION: "1.18.1"
     steps:
     - name: Set up Go
       uses: actions/setup-go@v5
       with:
-        go-version: 1.22
+        go-version: 1.23
 
     - name: Install Pebble test ACME server
       run: |

@@ -1,3 +1,4 @@
+version: 2
 builds:
   - main: ./cmd/vault-plugin-secrets-acme
     id: vault-acme
